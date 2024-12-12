@@ -127,7 +127,7 @@
     gap: 10px;
     margin: 0 auto;
     width: 30rem;
-    padding: 3rem; 
+    padding: 0.5rem; 
     justify-items: auto;
     
     border-radius: 5px;
@@ -163,13 +163,21 @@
 }
 
 .btn-mobile{
-   
-    margin-left: 60%;
+     margin-bottom:5%;
+     margin-left: 100%;
+     display: none;
 }
 
 #btn-mobile{
     border: none;
     font-size: 25px;
+    background-color: white;
+    
+}
+
+#btn-mobile:hover{
+    transform: scale(1.2);
+    color: #004aad;
 }
 
 @keyframes animacao{
@@ -188,7 +196,6 @@
     .Modal {
         width: fit-content;
         width: 20rem;
-        
     }
 
     .Modal-input input{
@@ -202,14 +209,25 @@
     }
 
     .botao{
-        width: fit-content;
-        margin-right:-1%;
+        margin-left: 3.5%;
+
     }
 
     .Modal-input p{
         font-size:15px;
+        margin-top: 3%;
         width:fit-content;
     }
+
+    .btn-mobile{
+       
+        margin-left: 90%;  }
 }
 
 
+    #btn-mobile{
+        
+    }
+
+
+lef
