@@ -1,0 +1,89 @@
+main {
+    margin: 20vh auto 0 auto;
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px black;
+    padding: 5vh;
+}
+
+.curiosidades{
+    margin: 20vh auto 0 auto;
+    width: 70%;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px black;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    padding: 7vh 10vh 0 10vh;
+}
+
+.conteudo img {
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.521);
+}
+
+.texto-conteudo {
+    padding: 40px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+    main {
+        width: 90%;
+    }
+
+    .conteudo {
+        flex-wrap: wrap;
+        padding: 5vh 5vh 0 5vh;
+    }
+
+    .conteudo img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .texto-conteudo {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+
+.contato{
+    margin: 20vh auto 0 auto;
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px black;
+}
+
+@media screen and (max-width: 768px) {
+    .conteudo {
+        flex-direction: column;
+    }
+
+    .texto-conteudo {
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        margin: 10vh auto 0 auto;
+    }
+
+    .texto-conteudo h1 {
+        font-size: 1.5em;
+    }
+
+    .texto-conteudo p {
+        font-size: 1em;
+    }
+
+    .conteudo img {
+        width: 100%;
+    }
+}

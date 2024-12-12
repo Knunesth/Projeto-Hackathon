@@ -1,0 +1,77 @@
+.splide{
+    margin-top: 100px;
+    transition: .4s;
+}
+
+.splide__slide {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    font-size: 1.5rem;
+    height: 300px;
+    transition: .4s;
+}
+
+.grid-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    position: relative;
+    transition: .35s;
+}
+
+.grid-item:hover{
+    cursor: pointer;
+    transform: scale(.9);
+    transition: .35s;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.39);
+}
+
+.grid-item p:hover{
+    color: black;
+    text-decoration: underline;
+    font-size: large;
+    
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-item h3 {
+    margin: 10px;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.grid-item p {
+    margin: 10px;
+    font-size: 1rem;
+    color: #666;
+}
+
+
+.lado-direito{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.lado-esquerdo{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 5px;
+}

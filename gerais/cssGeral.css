@@ -1,5 +1,5 @@
 /* Estilos Gerais - Ínicio */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Jacquarda+Bastarda+9&display=swap');
 
 *{
     margin: 0;
@@ -9,7 +9,7 @@
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", sans-serif;
     text-decoration: none;
 }
 
@@ -86,15 +86,11 @@
 
 /* NavBar - Fim */
 
-main{
-    height: 80vh;
-}
-
-
 /* Rodapé - Ínicio */
 
 footer{
     width: 100%;
+    margin-top: 10%;
     color: var(--color-neutral-40);
     box-shadow: 1px 1px 20px black;
 }
