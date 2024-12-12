@@ -91,10 +91,11 @@
     </nav>
     <!-- NavBar - Fim -->
 
-    <div class="interacao">
+    <form class="interacao">
       <div id="dialog-header" class="ytd-backstage-post-dialog-renderer" loaded style="background-color: transparent;">
         <i id="btn_img" class='bx bx-user' style='color:#004aad' ></i>
         <h1 id="user"> nome </h1>
+        <input type="hidden" name="nome" id="nome" value="">
       </div>
 
       <div class="opcoes">
@@ -103,29 +104,29 @@
         </div>
         <div class="attachments">
           <span class="estrutura_btn">
-            <button id="btn" aria-label="Adicionar imagem">
+            <button id="btn" aria-label="Adicionar imagem" type="button">
               <div class="btn-icon" aria-hidden="false">
                 <i id="btn_img" class='bx bxs-image-add' style='color:#004aad'></i>
               </div>
               <div class="btn-texto">
-                <span role="text">Imagem</span>
+                <span role="text" id="toggleButton">Imagem</span>
               </div>
             </button>
           </span>
 
           <span class="estrutura_btn">
-            <button id="btn" aria-label="Adicionar uma enquete">
+            <button id="btn" aria-label="Adicionar uma enquete" type="button">
               <div class="btn-icon" aria-hidden="true">
-                <i id="btn_img" class='bx bx-align-left' style='color:#004aad' ></i>
+                <i class='bx bxs-chat' style='color:#004aad'  ></i>
               </div>
               <div class="btn-texto">
-                <span role="text">Enquete</span>
+                <span role="text">Ajuda por IA</span>
               </div>
             </button>
           </span>
 
           <span class="estrutura_btn">
-            <button id="btn" aria-label="Adicionar um video">
+            <button id="btn" aria-label="Adicionar um video" type="button">
               <div class="btn-icon" aria-hidden="true">
                 <i id="btn_img" class='bx bxs-video-plus' style='color:#004aad' ></i>
               </div>
@@ -134,22 +135,23 @@
               </div>
             </button>
           </span>
-
-          <div class="post-btn-wrapper">
-            <button id="cancel-btn" aria-label="Cancelar">
-              <span role="text">Cancelar</span>
-            </button>
-            <button id="submit-btn" aria-label="Postar" aria-disabled="true">
-              <span role="text">Publicar</span>
-            </button>
+          <div class="mb-3">
+            <label for="formFileMultiple" class="form-label">Insira sua imagem</label>
+            <input class="form-control hidden" type="file" id="formFileMultiple" multiple>
           </div>
         </div>
+        <div class="post-btn-wrapper">
+          <button id="cancel-btn" aria-label="Cancelar" type="reset">
+            <span role="text">Cancelar</span>
+          </button>
+          <button id="submit-btn" aria-label="Postar" aria-disabled="true" type="submit">
+            <span role="text">Publicar</span>
+          </button>
+        </div>
       </div>
-    </div>
+    </form>
 
     <hr>
-
-
 
 <div class="titulo">
     <h1>Comentários recentes</h1>
@@ -247,7 +249,7 @@
       <div class="expandir" aria-expanded="false">
         <button id="btn-expandir">
           <span role="text">Ver Respostas</span>
-        </button>
+        </button> 
       </div>
     </div> 
 </div>
@@ -427,5 +429,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="js/comunidade.js"></script>
   </body>
 </html>

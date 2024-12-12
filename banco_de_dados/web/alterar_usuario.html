@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Cadastrar Usuário
+    </h1>
+    <form action="\GerenciarUsuario" method="post" id="form-alterar">
+        <input type="hidden" name="acao" value="2">
+        <input type="hidden" name="id" id="id" value="">
+        <div>
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" required>
+        </div>
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+            <label for="senha">Senha: </label>
+            <input type="password" name="senha" id="senha" required>
+        </div>
+        <div>
+            <label for="numero">Número: </label>
+            <input type="text" placeholder="Ex. (61) 99137-6539" name="numero" id="numero">
+        </div>
+        <div>
+            <label for="cargo">Cargo: </label>
+            <select name="cargo" id="cargo" required>
+                <option value="admin">Administrador</option>
+                <option value="empresa">Empresa</option>
+                <option value="comum">Comum</option>
+            </select>
+        </div>
+        <input type="submit" value="Cadastrar">
+    </form>
+</body>
+<script>
+    function colocarDados() {
+        const idUsuario = parseInt(new URLSearchParams(window.location.search).get('id'));
+        document.getElementById("id").value = idUsuario;
+        console.log(idUsuario);
+        fetch('/GerenciarUsuario', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ 
+                acao: '5',
+                id: idUsuario
+                
+            })
+        }).then(response => response.json()).then(data => {
+            const usuario = data[0];
+            console.log(usuario);
+
+            document.getElementById('nome').value = usuario.nome || null;
+            document.getElementById('email').value = usuario.email || null;
+            document.getElementById('senha').value = usuario.senha || null;
+            document.getElementById('numero').value = usuario.numero || null ;
+            
+        }).catch(error => console.error('Erro ao buscar dados:', error));
+    }
+
+    colocarDados()
+</script>
+</html>

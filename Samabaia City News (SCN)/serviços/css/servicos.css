@@ -1,3 +1,43 @@
+main{
+    margin: 5rem 0;
+    transition: 1s;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recente{
+    display: flex;
+    align-items: center;
+    color: #004aad;
+    margin-bottom: 1%;
+}
+
+.vagas{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   column-gap: 10px;
+   width: fit-content;
+   transition: 1s;
+}
+
+.emprego{
+    background-color: rgba(172, 172, 172, 0.158);
+    padding: 5%;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 5px;
+    width: fit-content;
+    box-shadow: 1px 1px 2px 1px  rgba(0, 0, 0, 0.452);
+}
+
+
+
+
+
+
 
 
 

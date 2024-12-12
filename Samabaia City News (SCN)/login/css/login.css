@@ -8,13 +8,15 @@
     margin: 5rem 0 auto ;
     display: flex;
     justify-content: center;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.507) ;
+    color: #004aad;
+    transition: aparecer 5s ease;
 }
+
 
 .hidden{
     margin: 5rem 0 auto ;
     justify-content: center;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.507);
+    color: #004aad;
     display: none;
 }
 
@@ -58,7 +60,6 @@
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.644);
     transition: 0.3s;
     width: 50%;
-    
 }
 
 .botoes:hover{
@@ -192,7 +193,41 @@
 
 /*Responsividade Modal*/
 
-@media screen and (max-width: 426px) {
+
+@media screen and (max-width:560px){
+    .btn-mobile{
+        display: block;
+        margin-left: 90%;
+     }
+
+     .Modal {
+        width: 30rem;
+        width: fit-content;
+    }
+
+
+    .Modal-input input{
+        width: fit-content;
+        width: 100%;
+    }
+
+    .botao{
+        justify-content: center;
+        
+    }
+
+    .Modal-input p{
+        font-size:15px;
+        margin-top: 3%;
+        width:fit-content;
+    }
+
+}
+
+
+
+
+@media screen and (min-width: 320px) and (max-width:414px) {
     .Modal {
         width: fit-content;
         width: 20rem;
@@ -200,17 +235,17 @@
 
     .Modal-input input{
         width: fit-content;
+        width: 100%;
     }
 
     .Modal-input{
-        width: fit;
-        width: 20rem;
-        
+        width: fit-content;
+        width: 100%;
     }
 
     .botao{
-        margin-left: 3.5%;
-
+        justify-content: center;
+        
     }
 
     .Modal-input p{
@@ -220,14 +255,8 @@
     }
 
     .btn-mobile{
-       
-        margin-left: 90%;  }
+       display: block;
+        margin-left: 90%;
+    }
 }
 
-
-    #btn-mobile{
-        
-    }
-
-
-lef

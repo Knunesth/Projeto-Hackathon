@@ -6,7 +6,7 @@ main {
     padding: 5vh;
 }
 
-.curiosidades{
+.curiosidades {
     margin: 20vh auto 0 auto;
     width: 70%;
     border-radius: 20px;
@@ -16,74 +16,82 @@ main {
 .conteudo {
     display: flex;
     justify-content: center;
-    text-align: left;
     align-items: center;
     padding: 7vh 10vh 0 10vh;
+    gap: 20px;
+    text-align: left;
 }
 
 .conteudo img {
     border-radius: 20px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.521);
+    max-width: 100%;
+    height: auto; 
 }
 
 .texto-conteudo {
     padding: 40px;
+    text-align: justify; 
+    flex: 1; 
 }
 
 /* Responsividade */
 @media screen and (max-width: 1024px) {
-    main {
-        width: 90%;
-    }
-
     .conteudo {
-        flex-wrap: wrap;
-        padding: 5vh 5vh 0 5vh;
+        flex-direction: column;
+        align-items: center;
+        padding: 5vh;
     }
 
     .conteudo img {
-        width: 100%;
+        width: 80%; 
         margin-bottom: 20px;
     }
 
     .texto-conteudo {
+        width: 90%; 
         padding: 20px;
-        text-align: center;
+        text-align: justify;
     }
-}
-
-
-.contato{
-    margin: 20vh auto 0 auto;
-    width: 90%;
-    border-radius: 20px;
-    box-shadow: 4px 4px 10px black;
 }
 
 @media screen and (max-width: 768px) {
     .conteudo {
         flex-direction: column;
+        padding: 5vh 5vh;
+        gap: 20px;
     }
 
     .texto-conteudo {
-        text-align: justify;
+        width: 100%; 
+        padding: 15px;
+        font-size: 1em; 
+        line-height: 1.6; 
+    }
+
+    .conteudo img {
+        width: 100%; 
     }
 }
 
 @media screen and (max-width: 480px) {
     main {
         margin: 10vh auto 0 auto;
+        padding: 2vh; 
     }
 
-    .texto-conteudo h1 {
-        font-size: 1.5em;
+    .conteudo {
+        padding: 2vh 2vw; 
+        gap: 10px; 
     }
 
-    .texto-conteudo p {
-        font-size: 1em;
+    .texto-conteudo {
+        padding: 10px; 
+        font-size: 1em; 
+        line-height: 1.4em; 
     }
 
     .conteudo img {
-        width: 100%;
+        margin-bottom: 10px; 
     }
 }
