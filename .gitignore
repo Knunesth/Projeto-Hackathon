@@ -1,0 +1,33 @@
+# Dependências
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Configurações locais do ambiente
+.env
+.env.local
+.env.*.local
+
+# Saída de builds
+dist/
+build/
+
+# Configurações de IDEs/editores
+.vscode/
+.idea/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Testes
+coverage/
+cypress/screenshots/
+cypress/videos/
+
+# Outros
+*.log
+*.lock-wscript

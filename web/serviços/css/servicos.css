@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");
+
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(38, 92%, 58%);
+  --first-color-light: hsl(38, 100%, 78%);
+  --first-color-alt: hsl(32, 75%, 50%);
+  --second-color: hsl(195, 75%, 52%);
+  --dark-color: hsl(212, 40%, 12%);
+  --white-color: hsl(212, 4%, 95%);
+  --body-color: hsl(212, 42%, 15%);
+  --container-color: hsl(212, 42%, 20%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Bai Jamjuree", sans-serif;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+}
+
+/*=============== CARD ===============*/
+main{
+  margin-top: 10%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: -25vh;
+  margin-bottom: -15vh;
+}
+
+
+.card__container {
+  padding-block: 5rem;
+}
+
+.card__content {
+  margin-inline: 1.75rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card__article1 {
+  width: 300px; /* Remove after adding swiper js */
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.card__article1:hover{
+  transform: scale(0.9);
+  transition: .3s;
+}
+
+.card__article2 {
+  width: 300px; /* Remove after adding swiper js */
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.card__article2:hover{
+  transform: scale(0.9);
+  transition: .3s;
+}
+
+.card__article3 {
+  width: 300px; /* Remove after adding swiper js */
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.card__article3:hover{
+  transform: scale(0.9);
+  transition: .3s;
+}
+
+.card__article4 {
+  width: 300px; /* Remove after adding swiper js */
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.card__article4:hover{
+  transform: scale(0.9);
+  transition: .3s;
+}
+
+.card__article5 {
+  width: 300px; /* Remove after adding swiper js */
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.card__article5:hover{
+  transform: scale(0.9);
+  transition: .3s;
+}
+
+.card__article6 {
+  width: 300px; /* Remove after adding swiper js */
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.card__article6:hover{
+  transform: scale(0.9);
+  transition: .3s;
+}
+
+.card__article7 {
+  width: 300px; /* Remove after adding swiper js */
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.card__article7:hover{
+  transform: scale(0.9);
+  transition: .3s;
+}
+
+.card__article8 {
+  width: 300px; /* Remove after adding swiper js */
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.card__article8:hover{
+  transform: scale(0.9);
+  transition: .3s;
+}
+
+.card__article9 {
+  width: 300px; /* Remove after adding swiper js */
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.card__article9:hover{
+  transform: scale(0.9);
+  transition: .3s;
+}
+
+.card__image1 {
+  position: relative;
+  background-color: var(--second-color);
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+}
+
+.card__image2 {
+  position: relative;
+  background-color: green;
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+}
+
+.card__image3 {
+  position: relative;
+  background-color: rgb(255, 230, 0);
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+}
+
+.card__image4 {
+  position: relative;
+  background-color: red;
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+}
+
+.card__image5 {
+  position: relative;
+  background-color: purple;
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+}
+
+.card__image6 {
+  position: relative;
+  background-color: orangered;
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+}
+
+.card__image7 {
+  position: relative;
+  background-color: darkblue;
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+}
+
+.card__image8 {
+  position: relative;
+  background-color: hotpink;
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+}
+
+.card__image9 {
+  position: relative;
+  background-color: maroon;
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+}
+
+.card__data {
+  background-color: whitesmoke;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.card__data > a{
+  text-decoration: none;
+
+}
+
+
+.card__img {
+  width: 180px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.card__shadow {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 3.75rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  filter: blur(45px);
+}
+
+.card__name {
+  font-size: var(--h2-font-size);
+  color: black;
+  margin-bottom: .75rem;
+}
+
+.card__description {
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+}
+
+.card__button {
+  display: inline-block;
+  background-color: rgb(6, 86, 206);
+  padding: .75rem 1.5rem;
+  border-radius: .25rem;
+  color: white;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.card__button:hover{
+  transform: scale(1.2);
+  background-color:  rgb(55, 124, 228);
+  transition: .3s;
+}
+
+/* Swiper class */
+.button-prev:after,
+.button-next:after {
+  content: "";
+}
+
+.button-prev,
+.button-next {
+  width: initial;
+  height: initial;
+  font-size: 3rem;
+  color: rgb(6, 86, 206);
+  display: none;
+}
+
+.button-prev {
+  left: 0;
+}
+
+.button-next {
+  right: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color:  rgb(55, 124, 228);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color:rgb(6, 86, 206); 
+}
+
+
+main{
+  margin: 5rem 0  ;
+  transition: 1s ease;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #004aad;
+}
+
+.container_2{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 3%;
+  padding: 0 5%;
+  transition: 1s ease-in;
+}
+.post{
+  display: flex;
+  gap: 1%;
+}
+
+.comercio{
+  padding: 2%;
+  border: 1px solid rgba(0, 0, 0, 0.61);
+  border-radius: 10px;
+  margin-bottom:1%;
+  background-color:#e4e1e1 ;
+  box-shadow: 1px 3px 8px 1px rgba(0, 0, 0, 0.582);
+
+}
+
+
+.comercio img{
+  width:5%;
+  border-radius: 20px;
+  margin-bottom:1% ;
+}
+
+.comercio img:hover{
+  cursor: pointer;
+}
+
+figcaption{
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width:560px){
+  .comercio img{
+    width: 13%;
+  }
+
+  .post{
+    gap: 2%;
+  }
+
+  .comercio{
+    margin-bottom:5%;
+  }
+  
+}
+
+@media screen and (min-width: 320px) and (max-width:414px){
+  .comercio img{
+    width: 10%;
+  }
+
+  .comercio h3{
+    font-size: 20px;
+  }
+
+  .comercio h4{
+    font-size: 20px;
+  }
+
+  .comercio{
+    margin-bottom:5%;
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .card__data {
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__content {
+    margin-inline: 3rem;
+  }
+
+  .button-next,
+  .button-prev {
+    display: block;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .card__container {
+    max-width: 1120px;
+  }
+
+  .button-prev {
+    left: -1rem;
+  }
+  .button-next {
+    right: -1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
