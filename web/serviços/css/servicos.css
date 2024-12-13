@@ -314,6 +314,38 @@ main{
   transition: 1s ease;
 }
 
+#modal {
+  position: absolute;
+  background: linear-gradient(#004badd2, #026efcde);
+  color: white;
+  padding: 1%;
+  border: 2px solid rgba(0, 0, 0, 0.863);
+  border-radius: 10px;
+  left: 19%; 
+  top: 90%; 
+  transform: translate(-50%, -50%); 
+  z-index: 1; 
+}
+
+
+#modal ul{
+  list-style: none;
+}
+
+.titulo-modal{
+  display: flex;
+  justify-content: space-between;
+}
+
+#closeModal:hover{
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition:0.5s ease;
+  transform: scale(1.2);
+}
+
+
+
 .titulo{
     display: flex;
     justify-content: center;
@@ -324,7 +356,7 @@ main{
 .container_2{
   display: grid;
   grid-template-columns: 1fr;
-  margin: 3%;
+  margin: 20px 20px;
   padding: 0 5%;
   transition: 1s ease-in;
 }
@@ -334,13 +366,19 @@ main{
 }
 
 .comercio{
-  padding: 2%;
   border: 1px solid rgba(0, 0, 0, 0.61);
-  border-radius: 10px;
-  margin-bottom:1%;
-  background-color:#e4e1e1 ;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 3%;
+  background-color: rgba(233, 226, 226, 0.516);
   box-shadow: 1px 3px 8px 1px rgba(0, 0, 0, 0.582);
+  width: 65%;
 
+  transition: 0.3s ease-in-out;
+}
+.comercio:hover{
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
 }
 
 
