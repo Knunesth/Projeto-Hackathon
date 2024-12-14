@@ -1,6 +1,9 @@
 const closeModal = document.getElementById('closeModal')
+const closeModal2 = document.getElementById('closeModal2')
 const modal = document.getElementById('modal')
+const modal2 = document.getElementById('modal2')
 const openModal = document.getElementById('btn-modal')
+const openModal2 = document.getElementById('btn-modal2')
 
 openModal.onclick = function(){
   modal.showModal()
@@ -8,6 +11,14 @@ openModal.onclick = function(){
 
 closeModal.onclick = function() {
   modal.close()
+}
+
+closeModal2.onclick = function(){
+  modal2.close()
+}
+
+openModal2.onclick = function(){
+  modal2.showModal()
 }
 
 /*=============== SWIPER JS ===============*/

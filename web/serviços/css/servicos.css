@@ -321,12 +321,28 @@ main{
   padding: 1%;
   border: 2px solid rgba(0, 0, 0, 0.863);
   border-radius: 10px;
-  left: 19%; 
-  top: 90%; 
+  left: 50%; 
+  top: 50%; 
   transform: translate(-50%, -50%); 
   z-index: 1; 
 }
 
+#modal2{
+  position: absolute;
+  background: linear-gradient(#004badd2, #026efcde);
+  color: white;
+  padding: 2%;
+  border: 2px solid rgba(0, 0, 0, 0.863);
+  border-radius: 10px;
+  left: 50%; 
+  top: 50%; 
+  transform: translate(-50%, -50%); 
+  z-index: 1; 
+}
+
+#modal2 ul{
+  list-style: none;
+}
 
 #modal ul{
   list-style: none;
@@ -338,6 +354,13 @@ main{
 }
 
 #closeModal:hover{
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition:0.5s ease;
+  transform: scale(1.2);
+}
+
+#closeModal2:hover{
   color: rgb(0, 0, 0);
   cursor: pointer;
   transition:0.5s ease;
@@ -373,7 +396,6 @@ main{
   background-color: rgba(233, 226, 226, 0.516);
   box-shadow: 1px 3px 8px 1px rgba(0, 0, 0, 0.582);
   width: 65%;
-
   transition: 0.3s ease-in-out;
 }
 .comercio:hover{
@@ -408,14 +430,25 @@ figcaption{
 
   .comercio{
     margin-bottom:5%;
+    width: fit-content;
   }
   
 }
 
 @media screen and (min-width: 320px) and (max-width:414px){
   .comercio img{
-    width: 10%;
+    width: 20%;
   }
+
+  .post{
+    gap: 2%;
+  }
+   
+  .container_2{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
 
   .comercio h3{
     font-size: 20px;
@@ -426,7 +459,9 @@ figcaption{
   }
 
   .comercio{
-    margin-bottom:5%;
+    margin-bottom: 5%;
+    width: fit-content;
+
   }
 }
 

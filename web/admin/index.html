@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samambaia City News - Admin</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <i data-lucide="newspaper" class="header-icon"></i>
+            <div onclick="location.href = '/home.html'" style="cursor: pointer;" >
+                <h1>Samambaia City News</h1>
+                <p>Painel Administrativo</p>
+            </div>
+        </header>
+
+        <div class="content">
+            <aside class="sidebar">
+                <nav>
+                    <button class="nav-button active" data-tab="users">
+                        <i data-lucide="users"></i>
+                        <span>Usuários</span>
+                    </button>
+                    <button class="nav-button" data-tab="post">
+                        <i data-lucide="message-square"></i>
+                        <span>Comentários</span>
+                    </button>
+                    <button class="nav-button" data-tab="punishments">
+                        <i data-lucide="user-cog"></i>
+                        <span>Punições</span>
+                    </button>
+                    <button class="nav-button" data-tab="analytics">
+                        <i data-lucide="bar-chart-2"></i>
+                        <span>Análises</span>
+                    </button>
+                </nav>
+            </aside>
+
+            <main class="main-content">
+                <div id="users-section" class="section active">
+                    <div class="section-header">
+                        <h2>Gerenciar Usuários</h2>
+                        <button class="btn-primary" id="new-user-btn">Novo Usuário</button>
+                    </div>
+                    <div class="table-container"></div>
+                </div>
+
+                <div id="analytics-section" class="section">
+                    <h2>Análises</h2>
+                    <div class="analytics-grid"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">
+                <i data-lucide="x"></i>
+            </button>
+            <h2 id="modal-title">Novo Usuário</h2>
+            <form id="user-form" action="/GerenciarUsuario" method="post">
+                <input type="hidden" name="acao" id="acaoUsuario" value="1">
+                <input type="hidden" name="status" id="statusUsuario" value="1">
+                <input type="hidden" name="id" id="idUsuario" value="">
+                <div class="form-group">
+                    <label for="nomeUsuario">Nome <abbr class="required" title="Obrigatório">*</abbr></label> 
+                    <input type="text" id="nomeUsuario" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailUsuario">Email <abbr class="required" title="Obrigatório">*</abbr></label>
+                    <input type="email" id="emailUsuario" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senhaUsuario">Senha <abbr class="required" title="Obrigatório">*</abbr></label>
+                    <input type="password" id="senhaUsuario" name="senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="numeroUsuario">Telefone: </label>
+                    <input type="text" maxlength="14" name="numero" id="numeroUsuario">
+
+                </div>
+                <div class="form-group">
+                    <label for="cargoUsuario">Função <abbr class="required" title="Obrigatório">*</abbr></label>
+                    <select id="cargoUsuario" name="cargo">
+                        <option value="user" selected>Usuário</option>
+                        <option value="empresa">Empresa</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="btn-primary" id="btnSubmit">Criar</button>
+                    <button type="button" class="btn-secondary" id="cancel-btn">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/users.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

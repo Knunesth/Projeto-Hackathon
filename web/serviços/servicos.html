@@ -96,6 +96,7 @@
           </div>
         </div>
         <a href="../login/login.html" class="login-button">Login</a>
+        <a href="/logoff" style="display: none" class="logoff-button">Sair</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -127,7 +128,7 @@
                 </div>
 
                 <div class="card__data">
-                  <h3 class="card__name">Pedreiro</h3>
+                  <h3 class="card__name"> 👷‍♂️ Pedreiro</h3>
                   <p class="card__description">
                     Realize construções, reformas e reparos em obras
                     residenciais ou comerciais.
@@ -143,13 +144,13 @@
                 </div>
 
                 <div class="card__data">
-                  <h3 class="card__name">Auxiliar de Limpeza</h3>
+                  <h3 class="card__name"> 🧹 Auxiliar de Limpeza</h3>
                   <p class="card__description">
                     Mantenha os ambientes limpos e organizados, garantindo
                     conforto e bem-estar.
                   </p>
 
-                  <a href="#" class="card__button">SAIBA MAIS</a>
+                  <button id="btn-modal2" class="card__button">SAIBA MAIS</button>
                 </div>
               </article>
 
@@ -159,7 +160,7 @@
                 </div>
 
                 <div class="card__data">
-                  <h3 class="card__name">Entregador</h3>
+                  <h3 class="card__name"> 🛵 Entregador</h3>
                   <p class="card__description">
                     Realize entregas rápidas e seguras de produtos e encomendas
                     na sua região.
@@ -175,7 +176,7 @@
                 </div>
 
                 <div class="card__data">
-                  <h3 class="card__name">Vendedor de Loja</h3>
+                  <h3 class="card__name"> 🙋‍♂️ Vendedor de Loja</h3>
                   <p class="card__description">
                     Atenda os clientes, apresente produtos e ajude na escolha do
                     que eles precisam.
@@ -191,7 +192,7 @@
                 </div>
 
                 <div class="card__data">
-                  <h3 class="card__name">Servente de Obras</h3>
+                  <h3 class="card__name"> 🏗️ Servente de Obras</h3>
                   <p class="card__description">
                     Auxilie os pedreiros no transporte de materiais e em tarefas
                     gerais nas construções.
@@ -207,7 +208,7 @@
                 </div>
 
                 <div class="card__data">
-                  <h3 class="card__name">Porteiro</h3>
+                  <h3 class="card__name"> 🔐 Porteiro</h3>
                   <p class="card__description">
                     Controle o acesso de visitantes, garantindo a segurança e
                     organização do local.
@@ -223,7 +224,7 @@
                 </div>
 
                 <div class="card__data">
-                  <h3 class="card__name">Auxiliar de Produção</h3>
+                  <h3 class="card__name"> 🏭 Auxiliar de Produção</h3>
                   <p class="card__description">
                     Trabalhe na linha de produção, ajudando na fabricação de
                     produtos e organização da área.
@@ -239,7 +240,7 @@
                 </div>
 
                 <div class="card__data">
-                  <h3 class="card__name">Carregador</h3>
+                  <h3 class="card__name"> 🚗 Carregador</h3>
                   <p class="card__description">
                     Ajude no transporte e organização de mercadorias em
                     depósitos e caminhões.
@@ -255,7 +256,7 @@
                 </div>
 
                 <div class="card__data">
-                  <h3 class="card__name">Zelador</h3>
+                  <h3 class="card__name"> 🪣 Zelador</h3>
                   <p class="card__description">
                     Cuide de prédios e condomínios, mantendo tudo em ordem e
                     funcionando
@@ -292,11 +293,25 @@
           <li>Experiência na área;</li>
         </ul>
         Salário: R$1.600,00 + vale transporte e alimentação.
-        <p>Contato: (61)9412-2245</p>
+        <p>Contato: (61)98369-3154</p>
+      </dialog>
+
+      <dialog id="modal2">
+        <div class="titulo-modal">
+          <h5>Vagas disponíveis: 10</h5>
+          <h4 id="closeModal2">X</h4>
+        </div>
+        <p>Requisitos:</p>
+        <ul>
+          <li>Disponibilidade de horário;</li>
+          <li>Experiência na área;</li>
+        </ul>
+        Salário: A combinar.
+        <p>Contato: (61)98369-3154</p>
       </dialog>
       <script src="js/servicos.js" defer></script>
 
-      <div class="titulo"><h1>Novidades Recentes</h1></div>
+      <div class="titulo"><h1>Novidades e Produtos</h1></div>
 
       <div class="container_2">
         <div class="comercio">
@@ -421,6 +436,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
 
     <script src="js/servicos.js"></script>
-
+    <script src="../entidades/usuario.js"></script>
   </body>
 </html>

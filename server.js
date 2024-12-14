@@ -79,14 +79,20 @@ app.post('/GerenciarUsuario', async (req, res) => {
                         req.session.save();
                     });
                 }
-                res.redirect('home.html');
+                if (req.session.usuario && req.session.usuario.cargo === 'admin') {
+                    res.redirect('admin/index.html');
+                } else {
+                    res.redirect('home.html');
+                }
                 break;
 
             case '2': // Alterar
-                await usuarioDAO.alterar(campos, res);
-                res.redirect('home.html');
+                console.log(campos);
+                await usuarioDAO.alterar(campos, res).then((resultado) => {
+                    return res.redirect('admin/index.html');
+                });
                 break;
-
+ 
             case '3': // Listar
                 await usuarioDAO.listar(res).then((resultado) => {
                     return res.json(resultado);
@@ -114,7 +120,7 @@ app.post('/GerenciarUsuario', async (req, res) => {
         res.send(`
             <script>
                 alert('${error}');
-                window.location.href = '/home.html';
+                history.back();
             </script>
         `);
     }
@@ -133,7 +139,11 @@ app.post('/ProcessarLogin', async (req, res) => {
         let usuario = {};
         await usuarioDAO.efetuarLogin(email, senha).then((resultado) => {
             if (resultado[0] == undefined) {
+                
                 throw "Email e/ou senha inválidos! Tente novamente."
+            }
+            if (resultado[0].status == 0) {
+                throw "Usuário banido. Não é possível fazer login."
             }
             req.session.usuario = resultado[0];
             req.session.save();
@@ -236,7 +246,7 @@ app.post('/GerenciarPost', async (req, res) => {
         res.send(`
             <script>
                 alert('${error}');
-                window.location.href = '/home.html';
+                history.back()';
             </script>
         `);
     }

@@ -8,28 +8,27 @@ function listar() {
             acao: '3'
         })
     }).then(response => response.json()).then(data => {
-        const tabela = document.getElementById('tabela-usuarios').querySelector('tbody');
-        tabela.innerHTML = '';
+        return data;
 
-        data.forEach(item => {
-            const id = limpar_dados(item.id || null);
-            const nome = limpar_dados(item.nome || null);
-            const email = limpar_dados(item.email || null);
+        // data.forEach(item => {
+        //     const id = limpar_dados(item.id || null);
+        //     const nome = limpar_dados(item.nome || null);
+        //     const email = limpar_dados(item.email || null);
 
-            tabela.innerHTML += `
-                <tr>
-                    <td>${id}</td>
-                    <td>${nome}</td>
-                    <td>${email}</td>
-                    <td>
-                        <button onclick="location.href = 'alterar_usuario.html?id=${id}'"> Alterar </button>
-                        <button onclick="deletarUsuario(${id})"> Excluir </button>
-                    </td>
-                </tr>
-            `;
-        });
+        //     tabela.innerHTML += `
+        //         <tr>
+        //             <td>${id}</td>
+        //             <td>${nome}</td>
+        //             <td>${email}</td>
+        //             <td>
+        //                 <button onclick="location.href = 'alterar_usuario.html?id=${id}'"> Alterar </button>
+        //                 <button onclick="deletarUsuario(${id})"> Excluir </button>
+        //             </td>
+        //         </tr>
+        //     `;
+        // });
     }).catch(error => console.error('Erro ao buscar     dados:', error));
-    return;
+    return [];
 }
 
 function deletarUsuario(idUsuario) {
@@ -50,8 +49,8 @@ function deletarUsuario(idUsuario) {
         })
     })
     .then(response => {
-        if (response.ok) {
-            window.location.href = '/usuarios.html';
+        if (!response.ok) {
+            window.location.href = 'admin/index.html';
         } else {
             alert('Erro ao deletar usuário.');
         }
@@ -74,6 +73,15 @@ fetch('/sessao').then(response => response.json()).then(usuario => {
         btnLogin.setAttribute('href', '../home.html');
         btnLogin.textContent = `Olá, ${nome.split(' ')[0]}`;
         btnLogoff.setAttribute('style', 'display: block');
+
+        if (usuario.cargo === 'admin') {
+            const navBar = document.getElementsByClassName('navbar-nav')[0];
+            navBar.innerHTML += `
+                <li class="nav-item">
+                    <a class="nav-link mx-lg-2" aria-current="page" href="/admin/index.html">Administração</a>
+                </li>
+            `;
+        }
 
         // Informações do post
 

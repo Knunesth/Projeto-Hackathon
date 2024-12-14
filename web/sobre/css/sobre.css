@@ -31,12 +31,14 @@
     padding: 2rem;
     transition: 0.3s ease-in-out;
     margin: 1rem 1rem;
+    cursor: context-menu;
  }
 .quadrado2{
     background-color: #e9e9e9;
     padding: 2rem;
     transition: 0.3s ease-in-out;
     margin: 1rem 1rem;
+    cursor: context-menu;
 }
 .quadrado1:hover{
     background-color: #e9e9e9;
